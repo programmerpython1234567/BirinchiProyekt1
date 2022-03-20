@@ -1,0 +1,52 @@
+Index: data/config.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/config.py b/data/config.py
+--- a/data/config.py	(revision 1363e2c0a72af22a5658e890731bffd53cbdb933)
++++ b/data/config.py	(revision 55d44d8a0c0c74cb9ebe17db3f916b2a3508e5fb)
+@@ -1,17 +1,17 @@
+-# from environs import Env
+-#
+-# # environs kutubxonasidan foydalanish
+-# env = Env()
+-# env.read_env()
+-#
+-# # .env fayl ichidan quyidagilarni o'qiymiz
+-# BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
+-# ADMINS = env.list("ADMINS")  # adminlar ro'yxati
+-# IP = env.str("ip")  # Xosting ip manzili
++from environs import Env
++
++# environs kutubxonasidan foydalanish
++env = Env()
++env.read_env()
+ 
+-import os
+-BOT_TOKEN = str(os.environ.get('BOT_TOKEN'))
+-ADMINS = str(os.environ.get('ADMINS'))
+-IP = str(os.environ.get('IP'))
++# .env fayl ichidan quyidagilarni o'qiymiz
++BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
++ADMINS = env.list("ADMINS")  # adminlar ro'yxati
++IP = env.str("ip")  # Xosting ip manzili
+ 
++# import os
++# BOT_TOKEN = str(os.environ.get('BOT_TOKEN'))
++# ADMINS = str(os.environ.get('ADMINS'))
++# IP = str(os.environ.get('IP'))
++#
+ 
+Index: Procfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Procfile b/Procfile
+deleted file mode 100644
+--- a/Procfile	(revision 1363e2c0a72af22a5658e890731bffd53cbdb933)
++++ /dev/null	(revision 1363e2c0a72af22a5658e890731bffd53cbdb933)
+@@ -1,1 +0,0 @@
+-worker: python app.py
+\ No newline at end of file
