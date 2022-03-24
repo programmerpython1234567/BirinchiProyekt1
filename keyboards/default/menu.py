@@ -12,6 +12,9 @@ asosiy_menu = ReplyKeyboardMarkup(
             KeyboardButton(text='Inglis tili')
         ],
         [
+            KeyboardButton(text='Islomy ilmlar'),
+        ]
+        [
             KeyboardButton(text='Adminga murojat qilish')
         ]
     ],
